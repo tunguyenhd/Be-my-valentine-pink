@@ -1,0 +1,119 @@
+:root {
+   --background-color: #ff9a9a;
+   --background-container-color: #ffebee;
+   --text-color: #ff6b81;
+   --border-color: #ff6b81;
+   --color-noBtn: #ff4757;
+   --color-yesBtn: #ff6b81;
+   --font-fml: "Indie Flower", cursive;
+   --box-shadow: 0 8px 20px rgb(201 51 73 / 61%);
+   --text-shadow: 5px 4px 4px rgba(255, 107, 129, 0.3);
+   --btn-shadow: 0 4px 10px rgba(255, 107, 129, 0.3);
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: var(--font-fml);
+   cursor: url(./assets/heart-love-marriage-15-svgrepo-com.svg), auto;
+   background-color: var(--background-color);
+}
+
+.container {
+   width: 100%;
+   max-width: 400px;
+   padding: 40px;
+   background-color: var(--background-container-color);
+   border: 5px solid var(--border-color);
+   border-radius: 20px;
+   text-align: center;
+   box-shadow: var(--box-shadow);
+}
+
+.header_text {
+   font-size: 36px;
+   color: var(--text-color);
+   text-shadow: var(--text-shadow);
+   margin: 20px 0;
+}
+
+.gif_container img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 10px;
+   margin-bottom: 20px;
+}
+
+.buttons {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+   margin-top: 20px;
+}
+
+.btn {
+   width: 85px;
+   padding: 12px 24px;
+   font-size: 20px;
+   font-family: var(--font-fml);
+   cursor: pointer;
+   background-color: var(--color-yesBtn);
+   border: 2px solid var(--border-color);
+   border-radius: 10px;
+   color: #fff;
+   transition: all 0.3s ease;
+   box-shadow: var(--btn-shadow);
+}
+
+.btn#no-btn {
+   background-color: var(--color-noBtn);
+}
+
+@keyframes wiggle {
+   0% {
+      transform: rotate(0deg);
+   }
+   25% {
+      transform: rotate(-5deg);
+   }
+   50% {
+      transform: rotate(5deg);
+   }
+   75% {
+      transform: rotate(-5deg);
+   }
+   100% {
+      transform: rotate(0deg);
+   }
+}
+
+.wiggle {
+   animation: wiggle 0.5s ease-in-out;
+}
+
+.heart {
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   background-color: transparent;
+   transform: translate(-50%, -50%);
+   animation: heartFade 1s ease-in-out forwards;
+   background-color: #ff6b81;
+   border-radius: 50%;
+}
+
+@keyframes heartFade {
+   0% {
+      opacity: 1;
+      transform: scale(1);
+   }
+   100% {
+      opacity: 0;
+      transform: scale(1.5);
+   }
+}
